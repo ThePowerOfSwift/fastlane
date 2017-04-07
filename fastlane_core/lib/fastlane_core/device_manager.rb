@@ -262,7 +262,7 @@ module FastlaneCore
         FastlaneCore::CommandExecutor.execute(command: command, print_all: false, print_command: true)
 
         FileUtils.mkdir_p(logarchive_dst)
-        FileUtils.cp_r("#{logarchive_src}/.", logarchive_dst)
+        FileUtils.cp_r("#{logarchive_src}/", logarchive_dst)
         UI.success "Copying file '#{logarchive_src}' to '#{logarchive_dst}'..."
       end
     end
